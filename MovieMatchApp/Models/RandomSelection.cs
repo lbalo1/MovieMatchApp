@@ -2,7 +2,7 @@ namespace MovieMatchApp.Models
 {
     public class RandomSelection
     {
-        public int SelectionID { get; set; }
+        public int RandomselectionID { get; set; }
 
         public int UserID { get; set; }
         public User User { get; set; }
