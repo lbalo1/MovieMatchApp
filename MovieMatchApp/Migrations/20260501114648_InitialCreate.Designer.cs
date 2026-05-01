@@ -11,7 +11,7 @@ using MovieMatchApp.Data;
 namespace MovieMatchApp.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260428192430_InitialCreate")]
+    [Migration("20260501114648_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
