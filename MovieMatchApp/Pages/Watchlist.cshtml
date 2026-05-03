@@ -1,9 +1,20 @@
 @page
 @model MovieMatchApp.Pages.WatchlistModel
 
-<h2>My Watchlist 🎬</h2>
+<h2>My Watchlist</h2>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <p style="color: green; font-weight: bold;">
+        @TempData["SuccessMessage"]
+    </p>
+}
 
 <a href="/AddMovie">Add New Movie</a>
+
+<br />
+
+<a href="/RandomMovie">Surprise Me</a>
 
 <br /><br />
 
@@ -13,6 +24,7 @@
         <th>Genre</th>
         <th>Year</th>
         <th>Runtime</th>
+        <th>Action</th>
     </tr>
 
     @foreach (var movie in Model.Movies)
@@ -26,7 +38,3 @@
     }
 </table>
 
-@if (TempData["SuccessMessage"] != null)
-{
-    <p style="color: green;">@TempData["SuccessMessage"]</p>
-}

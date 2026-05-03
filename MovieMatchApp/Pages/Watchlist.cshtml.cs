@@ -12,7 +12,7 @@ namespace MovieMatchApp.Pages
 
         public WatchlistModel(AppDbContext context)
         {
-            _context = context; 
+            _context = context;
         }
 
         public List<Movie> Movies { get; set; }

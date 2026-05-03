@@ -1,0 +1,22 @@
+@page
+@model MovieMatchApp.Pages.RandomMovieModel
+
+<h2>Your Random Movie</h2>
+
+@if (Model.SelectedMovie != null)
+{
+    <div style="border:1px solid black; padding:10px; margin:10px;">
+        <h3>@Model.SelectedMovie.Title (@Model.SelectedMovie.ReleaseYear)</h3>
+        <p><strong>Genre:</strong> @Model.SelectedMovie.Genre</p>
+        <p><strong>Description:</strong> @Model.SelectedMovie.Description</p>
+        <p><strong>Runtime:</strong> @Model.SelectedMovie.Runtime min</p>
+    </div>
+}
+else
+{
+    <p>No movies found. Add some first!</p>
+}
+
+<br />
+
+<a href="/Watchlist">Back to Watchlist</a>
