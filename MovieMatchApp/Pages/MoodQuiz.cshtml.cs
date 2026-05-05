@@ -42,10 +42,16 @@ namespace MovieMatchApp.Pages
             var topMood = moodScores.OrderByDescending(x => x.Value).First().Key;
 
             // Get movie with that mood
-            RecommendedMovie = _context.Movies
-           .Where(m => m.Mood == topMood)
-           .OrderBy(x => Guid.NewGuid())
-           .FirstOrDefault();
+            var movies = _context.Movies
+                .Where(m => m.Mood == topMood)
+                .ToList();
+
+            var random = new Random();
+
+            if (movies.Any())
+            {
+                RecommendedMovie = movies[random.Next(movies.Count)];
+            }
         }
 
         private string MapToMovieMood(string answer)

@@ -49,9 +49,17 @@
     <button type="submit">Get Recommendation</button>
 </form>
 
+  <br /><br />
+  
 @if (Model.RecommendedMovie != null)
 {
-    <h3>Your Movie:</h3>
+    <h3>Your Movie Match:</h3>
+
     <p><strong>@Model.RecommendedMovie.Title</strong></p>
-    <p>@Model.RecommendedMovie.Genre</p>
+
+    <div class="result-actions">
+        <a href="/MoodQuiz">Try Again</a>
+        <a href="/Watchlist">View Watchlist</a>
+    </div>
+
 }
