@@ -34,12 +34,20 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRkTW92aWUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/workspaces/MovieMatchApp/MovieMatchApp/Pages/EditMovie.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRWRpdE1vdmllLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/workspaces/MovieMatchApp/MovieMatchApp/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/workspaces/MovieMatchApp/MovieMatchApp/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/MovieMatchApp/MovieMatchApp/Pages/MoodQuiz.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTW9vZFF1aXouY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/workspaces/MovieMatchApp/MovieMatchApp/Pages/Privacy.cshtml]

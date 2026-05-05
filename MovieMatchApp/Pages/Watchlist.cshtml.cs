@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MovieMatchApp.Data;
 using MovieMatchApp.Models;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -20,6 +21,19 @@ namespace MovieMatchApp.Pages
         public void OnGet()
         {
             Movies = _context.Movies.ToList();
+        }
+
+        public IActionResult OnPostDelete(int id)
+        {
+            var movie = _context.Movies.Find(id);
+
+            if (movie != null)
+            {
+                _context.Movies.Remove(movie);
+                _context.SaveChanges();
+            }
+
+            return RedirectToPage();
         }
     }
 }

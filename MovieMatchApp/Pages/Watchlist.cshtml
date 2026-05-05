@@ -3,38 +3,39 @@
 
 <h2>My Watchlist</h2>
 
-@if (TempData["SuccessMessage"] != null)
-{
-    <p style="color: green; font-weight: bold;">
-        @TempData["SuccessMessage"]
-    </p>
-}
+<div style="text-align:center;">
+    <a href="/AddMovie">Add Movie</a>
+    <a href="/RandomMovie">Surprise Me</a>
+    <a href="/MoodQuiz">Take Quiz</a>
+</div>
 
-<a href="/AddMovie">Add New Movie</a>
-
-<br />
-
-<a href="/RandomMovie">Surprise Me</a>
-
-<br /><br />
-
-<table border="1">
-    <tr>
-        <th>Title</th>
-        <th>Genre</th>
-        <th>Year</th>
-        <th>Runtime</th>
-        <th>Action</th>
-    </tr>
-
+<div class="movie-grid">
     @foreach (var movie in Model.Movies)
     {
-        <tr>
-            <td>@movie.Title</td>
-            <td>@movie.Genre</td>
-            <td>@movie.ReleaseYear</td>
-            <td>@movie.Runtime min</td>
-        </tr>
-    }
-</table>
+        <div class="movie-card">
+            <h3>@movie.Title (@movie.ReleaseYear)</h3>
 
+            <p class="movie-meta">
+                @movie.Genre | @movie.Director
+            </p>
+
+            <p>@movie.Description</p>
+
+            <p><strong>@movie.Runtime min</strong> • Mood: @movie.Mood</p>
+
+            <div class="actions">
+                <form method="post" asp-page-handler="Delete" style="display:inline;">
+                    <input type="hidden" name="id" value="@movie.MovieID" />
+                    <button type="submit">Delete</button>
+                </form>
+
+                <a href="/EditMovie?id=@movie.MovieID">Edit</a>
+            </div>
+        </div>
+    }
+</div>
+
+@if (!Model.Movies.Any())
+{
+    <p style="text-align:center;">No movies yet. Add some!</p>
+}

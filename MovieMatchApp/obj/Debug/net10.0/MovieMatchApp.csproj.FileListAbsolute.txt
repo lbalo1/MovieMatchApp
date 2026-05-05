@@ -176,7 +176,6 @@
 /workspaces/MovieMatchApp/MovieMatchApp/obj/Debug/net10.0/scopedcss/Pages/Shared/_Layout.cshtml.rz.scp.css
 /workspaces/MovieMatchApp/MovieMatchApp/obj/Debug/net10.0/scopedcss/bundle/MovieMatchApp.styles.css
 /workspaces/MovieMatchApp/MovieMatchApp/obj/Debug/net10.0/scopedcss/projectbundle/MovieMatchApp.bundle.scp.css
-/workspaces/MovieMatchApp/MovieMatchApp/obj/Debug/net10.0/compressed/kdxuo7mqc1-{0}-b9sayid5wm-b9sayid5wm.gz
 /workspaces/MovieMatchApp/MovieMatchApp/obj/Debug/net10.0/compressed/qcuguackvs-{0}-61n19gt1b8-61n19gt1b8.gz
 /workspaces/MovieMatchApp/MovieMatchApp/obj/Debug/net10.0/compressed/eipbs29l8v-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 /workspaces/MovieMatchApp/MovieMatchApp/obj/Debug/net10.0/compressed/r4jji921jc-{0}-bqjiyaj88i-bqjiyaj88i.gz
@@ -251,3 +250,4 @@
 /workspaces/MovieMatchApp/MovieMatchApp/obj/Debug/net10.0/MovieMatchApp.pdb
 /workspaces/MovieMatchApp/MovieMatchApp/obj/Debug/net10.0/MovieMatchApp.genruntimeconfig.cache
 /workspaces/MovieMatchApp/MovieMatchApp/obj/Debug/net10.0/ref/MovieMatchApp.dll
+/workspaces/MovieMatchApp/MovieMatchApp/obj/Debug/net10.0/compressed/kdxuo7mqc1-{0}-pp3dojr8oe-pp3dojr8oe.gz

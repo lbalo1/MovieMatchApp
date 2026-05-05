@@ -1,0 +1,57 @@
+@page
+@model MovieMatchApp.Pages.MoodQuizModel
+
+<h2>Movie Quiz</h2>
+
+<form method="post">
+
+    <p>1. How do you feel today?</p>
+    <select name="Answers[0]">
+        <option value="Happy">Happy</option>
+        <option value="Sad">Sad</option>
+        <option value="Excited">Excited</option>
+        <option value="Relaxed">Relaxed</option>
+    </select>
+
+    <p>2. What vibe do you want?</p>
+    <select name="Answers[1]">
+        <option value="Funny">Funny</option>
+        <option value="Dark">Dark</option>
+        <option value="Romantic">Romantic</option>
+        <option value="Action">Action</option>
+    </select>
+
+    <p>3. Energy level?</p>
+    <select name="Answers[2]">
+        <option value="Lighthearted">Lighthearted</option>
+        <option value="Suspenseful">Suspenseful</option>
+        <option value="MindBlowing">MindBlowing</option>
+        <option value="Calm">Calm</option>
+    </select>
+
+    <p>4. What sounds best?</p>
+    <select name="Answers[3]">
+        <option value="TearJerker">Tear Jerker</option>
+        <option value="Heartwarming">Heartwarming</option>
+        <option value="Thriller">Thriller</option>
+        <option value="Comedy">Comedy</option>
+    </select>
+
+    <p>5. Pick a mood:</p>
+    <select name="Answers[4]">
+        <option value="Depressing">Depressing</option>
+        <option value="FeelGood">Feel Good</option>
+        <option value="Intense">Intense</option>
+        <option value="Chill">Chill</option>
+    </select>
+
+    <br /><br />
+    <button type="submit">Get Recommendation</button>
+</form>
+
+@if (Model.RecommendedMovie != null)
+{
+    <h3>Your Movie:</h3>
+    <p><strong>@Model.RecommendedMovie.Title</strong></p>
+    <p>@Model.RecommendedMovie.Genre</p>
+}

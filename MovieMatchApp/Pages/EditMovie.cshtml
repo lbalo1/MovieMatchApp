@@ -1,24 +1,17 @@
 @page
-@model MovieMatchApp.Pages.AddMovieModel
+@model MovieMatchApp.Pages.EditMovieModel
 
-<h2>Add a Movie</h2>
-
-<br />
+<h2>Edit Movie</h2>
 
 <form method="post">
+    <input type="hidden" asp-for="Movie.MovieID" />
+
     <div>
         <label>Title:</label>
         <input asp-for="Movie.Title" />
     </div>
 
     <br />
-
-    <div>
-        <label>Director:</label>
-        <input asp-for="Movie.Director" />
-    </div>
-
-     <br />
 
     <div>
         <label>Genre:</label>
@@ -28,11 +21,11 @@
     <br />
 
     <div>
-        <label>Mood:</label>
-        <input asp-for="Movie.Mood" />
+        <label>Director:</label>
+        <input asp-for="Movie.Director" />
     </div>
 
-     <br />
+    <br />
 
     <div>
         <label>Description:</label>
@@ -49,13 +42,18 @@
     <br />
 
     <div>
-        <label>Runtime (minutes):</label>
+        <label>Runtime:</label>
         <input asp-for="Movie.Runtime" type="number" />
     </div>
-    
+
     <br />
 
-    <button type="submit">Add Movie</button>
+    <div>
+        <label>Mood:</label>
+        <input asp-for="Movie.Mood" />
+    </div>
 
-      
+    <br />
+
+    <button type="submit">Save Changes</button>
 </form>
