@@ -7,6 +7,7 @@ using System.Collections.Generic;
 
 namespace MovieMatchApp.Pages
 {
+   // Handles quiz logic and movie recommendation 
     public class MoodQuizModel : PageModel
     {
         private readonly AppDbContext _context;
@@ -15,7 +16,7 @@ namespace MovieMatchApp.Pages
         {
             _context = context;
         }
-
+       // stores answers from dropdowns 
         [BindProperty]
         public List<string> Answers { get; set; }
 
@@ -27,11 +28,14 @@ namespace MovieMatchApp.Pages
         {
             // Count moods
             var moodScores = new Dictionary<string, int>();
-
+            
+            //Loops through answers 
             foreach (var answer in Answers)
             {
+                //Makes answer into standardized mood
                 var mood = MapToMovieMood(answer);
-
+            
+               //Count occurrences 
                 if (!moodScores.ContainsKey(mood))
                     moodScores[mood] = 0;
 
@@ -47,7 +51,8 @@ namespace MovieMatchApp.Pages
                 .ToList();
 
             var random = new Random();
-
+            
+            //To pick a random movie from filtered list
             if (movies.Any())
             {
                 RecommendedMovie = movies[random.Next(movies.Count)];
@@ -82,7 +87,8 @@ namespace MovieMatchApp.Pages
                 "FeelGood" => "FeelGood",
                 "Intense" => "Action",
                 "Chill" => "Chill",
-
+             
+             //Default mood if nothing matches the user 
                 _ => "FeelGood"
             };
         }

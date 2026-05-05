@@ -6,6 +6,7 @@ using System.Linq;
 
 namespace MovieMatchApp.Pages
 {
+    // Completely selects a random movie from the watchlist 
     public class RandomMovieModel : PageModel
     {
         private readonly AppDbContext _context;
@@ -19,8 +20,10 @@ namespace MovieMatchApp.Pages
 
         public void OnGet()
         {
+            // Get all movies
             var movies = _context.Movies.ToList();
 
+            // IF there are movies, pick random one 
             if (movies.Count > 0)
             {
                 Random rand = new Random();

@@ -5,6 +5,8 @@ using MovieMatchApp.Models;
 
 namespace MovieMatchApp.Pages
 {
+
+// Handles editing an existing movie
     public class EditMovieModel : PageModel
     {
         private readonly AppDbContext _context;
@@ -13,7 +15,7 @@ namespace MovieMatchApp.Pages
         {
             _context = context;
         }
-
+        // Binds form data to Movie object 
         [BindProperty]
         public Movie Movie { get; set; }
 
@@ -31,6 +33,7 @@ namespace MovieMatchApp.Pages
 
         public IActionResult OnPost()
         {
+            // Updates movie in database 
             _context.Movies.Update(Movie);
             _context.SaveChanges();
 

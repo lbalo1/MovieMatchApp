@@ -7,6 +7,7 @@ using System.Linq;
 
 namespace MovieMatchApp.Pages
 {
+    // Displays all movies and handles delete
     public class WatchlistModel : PageModel
     {
         private readonly AppDbContext _context;
@@ -16,6 +17,7 @@ namespace MovieMatchApp.Pages
             _context = context;
         }
 
+       // List of movies displayed on page 
         public List<Movie> Movies { get; set; }
 
         public void OnGet()
@@ -24,15 +26,16 @@ namespace MovieMatchApp.Pages
         }
 
         public IActionResult OnPostDelete(int id)
-        {
+        { 
             var movie = _context.Movies.Find(id);
 
+            // Remove if it exist
             if (movie != null)
             {
                 _context.Movies.Remove(movie);
                 _context.SaveChanges();
             }
-
+            //to refresh the page
             return RedirectToPage();
         }
     }
